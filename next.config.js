@@ -1,18 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: true,
-  images:{
-  }
-}
+
 const repo = 'arunsoman/tooltip-react-tailwind'
+/**
 const assetPrefix = `/${repo}/`
 const basePath = `/${repo}`
-
-module.exports = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-}
+*/
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
@@ -30,6 +22,10 @@ if (isGithubActions) {
 module.exports = {
   assetPrefix: assetPrefix,
   basePath: basePath,
+  reactStrictMode: false,
+  swcMinify: true,
+  images:{
+  }
 }
 
 // module.exports = nextConfig
