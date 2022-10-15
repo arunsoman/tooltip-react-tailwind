@@ -30,6 +30,10 @@ if (isGithubActions) {
 module.exports = {
   assetPrefix: assetPrefix,
   basePath: basePath,
+  reactStrictMode: false,
+  swcMinify: true,
+  images:{
+  }
 }
 
 // module.exports = nextConfig
