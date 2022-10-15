@@ -3,11 +3,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
 
 jobs:
   build:
-		
     runs-on: ubuntu-latest
 
     steps:
@@ -35,12 +34,9 @@ jobs:
           npm run export
           touch out/.nojekyll
 
-npm set-script build "next build"
-npm set-script export "next export"
-
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@4.4.0 
         with:
-          branch: main
+          branch: gh-pages
           folder: out
