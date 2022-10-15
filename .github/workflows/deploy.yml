@@ -42,5 +42,5 @@ npm set-script export "next export"
         # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@4.4.0 
         with:
-          branch: gh-pages
+          branch: main
           folder: out
